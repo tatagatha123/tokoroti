@@ -1,0 +1,279 @@
+:root {
+  --white: #fff;
+  --dark: #141313;
+  --primary: #f8b500;
+  --secondary: #292623;
+  --light: #f4f4f4;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--light);
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 230px;
+  background-color: var(--white);
+  color: var(--dark);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h1 {
+  text-align: left;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 18px 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+  transform: scale(1.03);
+}
+
+.logout-btn {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color:#f8b500;
+  color: var(--dark);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 25px 40px;
+  overflow-y: auto;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+h2 {
+  color: var(--dark);
+}
+
+/* ===== CARD & GRID ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.menu-card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== TABLE ===== */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.report-table th, .report-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+
+
+/* ===== BUTTON ===== */
+.btn {
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #c8cac8;
+}
+
+.btn-edit {
+  background-color: #55f147;
+}
+
+.btn-delete {
+  background-color: #e82828;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c8cac8;
+}
+
+/* ===== MODAL ===== */
+.crud-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.crud-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crud-modal input,
+.crud-modal textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.crud-modal button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.crud-modal h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--dark);
+}
+
+/* ===== WELCOME CARD ===== */
+.welcome-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+/* ===== LAPORAN PENJUALAN ===== */
+.laporan-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.laporan-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.laporan-table thead {
+  background-color: #f8b500;
+  color: #000;
+}
+
+.laporan-table th {
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+.laporan-table tbody tr {
+  background-color: #fff;
+}
+
+.laporan-table td {
+  padding: 14px 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.laporan-table tbody tr:hover {
+  background-color: #fff9db;
+}
+
+.judul-laporan {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+ /* ===== PREVIEW GAMBAR ===== */
+#modalEdit form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* bikin semua isi form di tengah */
+    gap: 10px;
+}
+
+#modalEdit input,
+#modalEdit button {
+    width: 80%; /* biar form tetap proporsional */
+}
+
+#preview_container img {
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    max-width: 120px;
+}
+

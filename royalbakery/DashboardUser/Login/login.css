@@ -1,0 +1,90 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff3e0, #f9cc8a); /* krem lembut ke oranye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fffaf2; /* putih krem */
+    padding: 35px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    width: 400px;
+    text-align: center;
+    border: 1px solid #ffe2b3; /* bingkai lembut */
+}
+
+h2 {
+    color: #4d2e05; /* coklat gelap */
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5f3a10; /* coklat karamel */
+}
+
+input, button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input {
+    border: 2px solid #f6d28b;
+    background-color: #fffdf8;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #f3b04b;
+    box-shadow: 0 0 6px rgba(243, 176, 75, 0.4);
+}
+
+button {
+    border: none;
+    background-color: #f3a03b; /* oranye roti */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #d88928; /* oranye lebih tua */
+}
+
+.back-btn {
+    background-color: #fff2d0;
+    color: #5a3e1b;
+    border: 1px solid #f3d184;
+}
+
+.back-btn:hover {
+    background-color: #ffe19f;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #d88928;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #a66b20;
+}

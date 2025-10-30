@@ -1,0 +1,93 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff3e0, #f9cc8a); /* krem lembut ke oranye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: #fffdfa; /* putih hangat */
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    width: 340px;
+    text-align: center;
+    border: 1px solid #f4b064;
+}
+
+h2 {
+    color: #5a3e1b;
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: 550;
+    margin-bottom: 5px;
+    color: #5f3a10;
+    font-size: 13px;
+}
+
+input, textarea, button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+input, textarea {
+    border: 1.5px solid #f4c98a;
+    background-color: #fffdf8;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #f99726;
+    box-shadow: 0 0 4px rgba(249, 151, 38, 0.3);
+}
+
+button {
+    border: none;
+    background-color: #f99726;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 9px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68a1f;
+}
+
+.footer {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: #5f3a10;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #f99726;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #e68a1f;
+}
+
+@media (max-width: 420px) {
+    .register-container {
+        width: 85%;
+        padding: 20px;
+    }
+}

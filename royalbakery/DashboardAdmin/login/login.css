@@ -1,0 +1,181 @@
+:root {
+    --grad-start: #fceabb;
+    --grad-end: #f8b500;
+    --hover-color: #e0a106;
+    --white: #fff;
+    --text-dark: #333;
+    --text-soft: #555;
+    --border-color: #ddd;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+}
+
+/* Background gradient */
+body {
+    background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kotak form */
+.login-container {
+    background: var(--white);
+    box-shadow: 0 8px 20px var(--shadow);
+    border-radius: 16px;
+    padding: 50px 55px;
+    width: 420px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Judul */
+.login-container h2 {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Error Message */
+.error-msg {
+    background-color: #ffe8e8;
+    color: #d8000c;
+    border: 1px solid #ffbaba;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Form */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label */
+.login-container label {
+    color: var(--text-soft);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Input */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text-dark);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: var(--grad-end);
+    outline: none;
+    box-shadow: 0 0 5px var(--grad-end);
+}
+
+/* Tombol Login */
+.login-container button {
+    background: var(--grad-end);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-container button:hover {
+    background: var(--hover-color);
+    transform: scale(1.03);
+}
+
+/* Dashboard Layout (nanti dipakai di dashboard.php) */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #fff9e6;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, var(--grad-end), var(--grad-start));
+    color: var(--white);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Sidebar Menu */
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.sidebar a {
+    display: block;
+    color: var(--white);
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Tombol Logout */
+.logout-btn {
+    background: #fbcfcf;
+    color: #a22;
+    border: 1px solid #f3aaaa;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #f8b0b0;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 50px 60px;
+}
+
+.main-content h2 {
+    color: var(--text-dark);
+    font-size: 28px;
+    margin-bottom: 25px;
+}
